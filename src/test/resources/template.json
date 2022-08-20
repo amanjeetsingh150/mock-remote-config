@@ -1,0 +1,37 @@
+{
+  "conditions": [
+    {
+      "name": "Bar_Feature_4%",
+      "expression": "percent \u003c= 4 && app.id == '1:72203376800:android:0b97fbed5421afa16e51c5'",
+      "tagColor": "GREEN"
+    }
+  ],
+  "parameters": {
+    "bar": {
+      "defaultValue": {
+        "value": "false"
+      },
+      "conditionalValues": {
+        "Bar_Feature_4%": {
+          "value": "true"
+        }
+      },
+      "valueType": "BOOLEAN"
+    },
+    "foo": {
+      "defaultValue": {
+        "value": "1"
+      },
+      "valueType": "STRING"
+    }
+  },
+  "version": {
+    "versionNumber": "2",
+    "updateTime": "2022-08-20T11:30:29.279260Z",
+    "updateUser": {
+      "email": "amanjeetsingh150@gmail.com"
+    },
+    "updateOrigin": "CONSOLE",
+    "updateType": "INCREMENTAL_UPDATE"
+  }
+}
