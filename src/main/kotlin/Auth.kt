@@ -1,10 +1,10 @@
 import com.google.auth.oauth2.GoogleCredentials
 import java.io.File
 
-class Auth {
+class Auth(private val serviceAccountPath: String) {
 
     fun getAccessToken(): String? {
-        val googleCredentials = GoogleCredentials.fromStream(File("./service_account.json").inputStream())
+        val googleCredentials = GoogleCredentials.fromStream(File(serviceAccountPath).inputStream())
             .createScoped(listOf(REMOTE_CONFIG_SCOPE))
         googleCredentials.refreshIfExpired()
         return googleCredentials.accessToken.tokenValue

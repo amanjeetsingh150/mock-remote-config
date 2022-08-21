@@ -4,10 +4,10 @@ import org.apache.http.impl.client.HttpClients
 import org.apache.http.util.EntityUtils
 import java.io.File
 
-class GetRemoteConfigTemplate(private val auth: Auth) {
+class GetRemoteConfigTemplate(private val auth: Auth, private val secretsFilePath: String) {
 
     fun invoke(): String {
-        val secrets = String(File("./secrets.json").inputStream().readBytes())
+        val secrets = String(File(secretsFilePath).inputStream().readBytes())
         val projectId = JsonParser.parseString(secrets).asJsonObject.get("project_id").asString
         val httpClient = HttpClients.custom().build()
         val request = RequestBuilder.get()
