@@ -25,7 +25,7 @@ for your performance benchmarks.
 2. Create secrets.json and save project id in it.
 ```
 {
-  "project_id": "<your-project-id-here>"
+  "project_id": "<your-firebase-project-id-here>"
 }
 ```
 3. Run `./gradlew fatJar`
